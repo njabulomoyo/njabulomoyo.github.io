@@ -285,6 +285,9 @@ section {
     height:280px;
     width: 280px;
 }
+#github-icon {
+    color: black
+}
 /* Styles for screens smaller than 768px (typical tablet size) */
 @media (max-width: 768px) {
     body {
