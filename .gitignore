@@ -1,0 +1,15 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# Node (for future tooling / CI)
+node_modules/
+npm-debug.log*
+
+# Build / test output
+/dist/
+/.cache/
+lighthouse-report.*
