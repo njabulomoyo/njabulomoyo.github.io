@@ -3,218 +3,424 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Njabulo Moyo</title>
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0b0d12" media="(prefers-color-scheme: dark)">
+    <title>Njabulo Moyo — Software Engineer</title>
+    <meta name="description" content="Njabulo Moyo is a Computer Science &amp; Cloud Computing student at Grambling State University building cloud and AI-powered software. Projects, experience, and skills.">
+
+    <link rel="canonical" href="https://njabulomoyo.github.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Njabulo Moyo — Software Engineer">
+    <meta property="og:description" content="Computer Science &amp; Cloud Computing student at Grambling State University building cloud and AI-powered software.">
+    <meta property="og:url" content="https://njabulomoyo.github.io/">
+    <meta property="og:image" content="https://njabulomoyo.github.io/images/njabu-sq.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-</head>
+
+    <script>
+        // Set the theme before first paint to avoid a flash.
+        (function () {
+            document.documentElement.classList.add('js');
+            try {
+                var saved = localStorage.getItem('theme');
+                if (saved === 'light' || saved === 'dark') {
+                    document.documentElement.setAttribute('data-theme', saved);
+                }
+            } catch (e) { /* localStorage unavailable */ }
+        })();
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Njabulo Moyo",
+        "url": "https://njabulomoyo.github.io/",
+        "jobTitle": "Software Engineer",
+        "alumniOf": "Grambling State University",
+        "sameAs": [
+            "https://www.linkedin.com/in/njabulo-moyo",
+            "https://github.com/njabulomoyo"
+        ]
+    }
+    </script>
 </head>
 <body>
-    <header id="header">
-        
-        <nav class="navibar">
-            <ul class="navibar_menu">
-                <li>
-                    <a href="#main-heading" class="navibar_item">Home</a>                       
-                </li>                            
-                <li>
-                    <a href="#end-of-home" class="navibar_item">Projects</a>                        
-                </li>                            
-                <li>
-                    <a href="#end-of-projects" class="navibar_item">Skills</a>                       
-                </li>                            
-                <li>
-                    <a href="#end-of-skills" class="navibar_item">Contact</a>                       
-                </li>              
-            </ul>
-        <nav>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <svg width="0" height="0" class="svg-sprite" aria-hidden="true" focusable="false">
+        <symbol id="i-linkedin" viewBox="0 0 24 24">
+            <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.24zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z" fill="currentColor"/>
+        </symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24">
+            <rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="m4 7 8 5.5L20 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </symbol>
+        <symbol id="i-github" viewBox="0 0 24 24">
+            <path d="M12 1C5.92 1 1 5.92 1 12c0 4.87 3.15 8.99 7.52 10.45.55.1.75-.24.75-.53 0-.26-.01-.95-.01-1.87-3.06.66-3.71-1.48-3.71-1.48-.5-1.28-1.22-1.62-1.22-1.62-1-.68.08-.67.08-.67 1.1.08 1.68 1.13 1.68 1.13.98 1.68 2.57 1.2 3.2.92.1-.71.38-1.2.69-1.47-2.44-.28-5.01-1.22-5.01-5.43 0-1.2.43-2.18 1.13-2.95-.11-.28-.49-1.4.11-2.91 0 0 .92-.3 3.02 1.13a10.5 10.5 0 0 1 5.5 0c2.1-1.43 3.02-1.13 3.02-1.13.6 1.51.22 2.63.11 2.91.7.77 1.13 1.75 1.13 2.95 0 4.22-2.58 5.15-5.03 5.42.4.34.74 1.01.74 2.04 0 1.47-.01 2.66-.01 3.02 0 .29.2.64.76.53A11 11 0 0 0 23 12c0-6.08-4.92-11-11-11Z" fill="currentColor"/>
+        </symbol>
+        <symbol id="i-external" viewBox="0 0 24 24">
+            <path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="i-sun" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </symbol>
+        <symbol id="i-moon" viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+    </svg>
+
+    <header class="site-header" id="site-header">
+        <div class="nav-inner">
+            <a href="#main" class="brand" aria-label="Njabulo Moyo — home">NM</a>
+
+            <nav class="primary-nav" aria-label="Primary">
+                <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+                    <span class="nav-toggle-box">
+                        <span class="nav-toggle-bar"></span>
+                    </span>
+                    <span class="sr-only">Menu</span>
+                </button>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch colour theme">
+                <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"></use></svg>
+                <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"></use></svg>
+            </button>
+        </div>
     </header>
 
-    <div id="main-heading">Hello World!!</div><br>
-    <section id="home">
-        <img class="proj-photos" id="my-photo" src="images/njabu-sq.jpg">
-        <div class="home-sub">
-            <p>
-                Hi, I'm Njabulo Moyo, an aspiring software engineer from Zimbabwe, based in the United States. I'm passionate 
-                about continuous learning and building technology solutions that create real world impact.
-            </p><br>
-            <p> 
-                This page showcases my work and interests—feel free to reach out!
-            </p>
-        </div>
-    </section>
-    <br><div id="end-of-home"></div><br>
-     
-    <section>
-        <div class="heading">Projects</div>
-        <div  id="project1">
-            <p class="subheading">Grambling Class Registration app</p>
-            <div class="subheading-container">
-                <div class="pic-container"><img class="proj-photos" src="images/course_registration.jpg"></div>
-                <p class="description">
-                    Worked with a student to develop a Python-based web application for automated course 
-                    registration and class schedule generation. I built the front end with HTML & CSS, 
-                    implemented the backend with Flask, used Selenium for web automation and scraping, 
-                    and managed data storage with AWS Relational Database.
-                    <br>
-                    <a href="https://github.com/njabulomoyo/GSU-Registration">Learn More</a>
+    <main id="main">
+        <section class="hero" id="hero">
+            <div class="hero-text reveal">
+                <p class="eyebrow">Software Engineer</p>
+                <h1>Njabulo Moyo</h1>
+                <p class="hero-tagline">
+                    Computer Science &amp; Cloud Computing student at Grambling State University,
+                    building cloud and AI-powered tools that create real-world impact.
                 </p>
-            </div>
-        </div><br>
-
-        <div  id="project1">
-            <p class="subheading">Grambling Class Attendence app</p>
-            <div class="subheading-container">
-                <div class="pic-container">
-                    <img class="proj-photos" src="images/class-attendence.jpg">
+                <p class="availability"><span class="status-dot" aria-hidden="true"></span> Open to Summer 2026 internships</p>
+                <div class="button-row">
+                    <a class="btn btn-primary" href="#projects">View projects</a>
+                    <a class="btn btn-ghost" href="https://docs.google.com/document/d/1eaLpEVthnXvs-y-QxFRHb7dqZEmS78E2/export?format=pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
+                    <a class="btn btn-ghost" href="#contact">Get in touch</a>
                 </div>
-                <p class="description">
-                    Worked with a team of four to develop a Swift-based mobile app that uses nearby 
-                    interaction for automatic student attendance tracking. I implemented the login and 
-                    sign-up pages and integrated Firestore for user account management. 
-                    <br>
-                    <a href="https://github.com/ShalomDee/c2_classync">Learn More</a>
+                <ul class="social-row">
+                    <li>
+                        <a href="https://www.linkedin.com/in/njabulo-moyo" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <svg class="icon" aria-hidden="true"><use href="#i-linkedin"></use></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/njabulomoyo" target="_blank" rel="noopener" aria-label="GitHub">
+                            <svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:njabulomoyo1327@gmail.com" aria-label="Email">
+                            <svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="hero-photo reveal">
+                <img src="images/njabu-sq.jpg" alt="Portrait of Njabulo Moyo" width="360" height="360">
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <div class="section-head reveal">
+                <p class="eyebrow">About</p>
+                <h2>Background</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-bio reveal">
+                    <p>
+                        I'm a software engineer from Zimbabwe, based in the United States, studying a double major in
+                        B.S. Computer Science &amp; Cloud Computing at Grambling State University (GPA 3.72, graduating
+                        December 2027). Most recently I interned at Solera Holdings, where I helped build an AI-powered
+                        platform used across hundreds of products.
+                    </p>
+                    <p>
+                        I care about writing software that measurably helps people — faster workflows, less manual work,
+                        better access. I also mentor 50+ students each year as a peer tutor in math and programming.
+                    </p>
+                    <p>
+                        Outside of code: abstract and sculpture art, hiking, reading, and sports.
+                    </p>
+                </div>
+                <div class="about-facts reveal">
+                    <dl>
+                        <div>
+                            <dt>Location</dt>
+                            <dd>Grambling, Louisiana</dd>
+                        </div>
+                        <div>
+                            <dt>Education</dt>
+                            <dd>B.S. Computer Science &amp; Cloud Computing, Grambling State University — Dec 2027</dd>
+                        </div>
+                        <div>
+                            <dt>GPA</dt>
+                            <dd>3.72</dd>
+                        </div>
+                        <div>
+                            <dt>Focus</dt>
+                            <dd>Cloud, backend, and AI-powered products</dd>
+                        </div>
+                        <div>
+                            <dt>Open to</dt>
+                            <dd>Summer 2026 internships</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="experience">
+            <div class="section-head reveal">
+                <p class="eyebrow">Experience</p>
+                <h2>Where I've worked</h2>
+            </div>
+            <ol class="timeline">
+                <li class="timeline-item reveal">
+                    <p class="timeline-date">Jun – Aug 2025</p>
+                    <div class="timeline-body">
+                        <h3>Software Engineering Intern <span>· Solera Holdings</span></h3>
+                        <p class="timeline-loc">Westlake, TX</p>
+                        <p>Built an AI-powered platform to streamline client–service advisor workflows and cut manual interaction overhead.</p>
+                        <ul>
+                            <li>Engineered a configurable AI chat assistant with JavaScript, C#, and .NET Web API for integration across 400+ Solera products.</li>
+                            <li>Configured CI/CD workflows with GitHub Actions and Rancher, and resolved deployment failures.</li>
+                            <li>Optimized asynchronous message detection, reducing detection latency by over 80%.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="section" id="projects">
+            <div class="section-head reveal">
+                <p class="eyebrow">Projects</p>
+                <h2>Things I've built</h2>
+            </div>
+
+            <div class="project-grid">
+                <article class="project-card reveal">
+                    <div class="project-media">
+                        <img src="images/course_registration.jpg" alt="Swifty class registration app" loading="lazy" width="640" height="400">
+                        <span class="badge">1st place · Grambling Symposium 2025</span>
+                    </div>
+                    <div class="project-body">
+                        <h3>Swifty Class Registration App</h3>
+                        <p>
+                            An automated class-scheduling tool that generates conflict-free schedules from student
+                            preferences and curriculum. Scheduling and conflict-detection algorithms evaluate course
+                            combinations to prevent overlapping times — cutting scheduling time by over 50%, an
+                            estimated 5,000+ student hours per semester.
+                        </p>
+                        <ul class="chips">
+                            <li>Python</li>
+                            <li>Flask</li>
+                            <li>JavaScript</li>
+                            <li>Bootstrap</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/njabulomoyo/GSU-Registration" target="_blank" rel="noopener">
+                                <svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg> Code
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-media">
+                        <img src="images/class-attendence.jpg" alt="Classync class attendance app" loading="lazy" width="640" height="400">
+                    </div>
+                    <div class="project-body">
+                        <h3>Classync Class Attendance App</h3>
+                        <p>
+                            A Swift/SwiftUI attendance app built with a team of five to streamline attendance tracking
+                            for students and faculty. Integrated Firebase Authentication and NoSQL data services for
+                            sign-in and real-time sync, reducing attendance-marking time by 50%.
+                        </p>
+                        <ul class="chips">
+                            <li>Swift</li>
+                            <li>SwiftUI</li>
+                            <li>Firebase Auth</li>
+                            <li>NoSQL</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/ShalomDee/c2_classync" target="_blank" rel="noopener">
+                                <svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg> Code
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-media">
+                        <img src="images/health.jpg" alt="Healthcare management app" loading="lazy" width="640" height="400">
+                    </div>
+                    <div class="project-body">
+                        <h3>Healthcare Management App</h3>
+                        <p>
+                            A Flask web app built with a team of four for doctor appointments, prescription management,
+                            and medical billing. I built the user interface with HTML, CSS, and JavaScript, focused on a
+                            responsive, easy-to-use experience.
+                        </p>
+                        <ul class="chips">
+                            <li>Flask</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/njabulomoyo/CS_120_PROJECT" target="_blank" rel="noopener">
+                                <svg class="icon" aria-hidden="true"><use href="#i-github"></use></svg> Code
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <h3 class="subhead reveal">In progress</h3>
+            <div class="project-grid">
+                <article class="project-card is-upcoming reveal">
+                    <div class="project-media">
+                        <img src="images/tutoring-pic.webp" alt="Find My Tutor app" loading="lazy" width="640" height="400">
+                        <span class="badge badge-soft">Coming soon</span>
+                    </div>
+                    <div class="project-body">
+                        <h3>Find My Tutor</h3>
+                        <p>
+                            Connects students with qualified tutors and simplifies search, scheduling, and bookings.
+                            Built with React, Flask, and AWS.
+                        </p>
+                        <ul class="chips">
+                            <li>React</li>
+                            <li>Flask</li>
+                            <li>AWS</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="skills">
+            <div class="section-head reveal">
+                <p class="eyebrow">Skills</p>
+                <h2>What I work with</h2>
+            </div>
+            <div class="skills-groups">
+                <div class="skill-group reveal">
+                    <h3>Languages</h3>
+                    <ul class="chips">
+                        <li>Python</li>
+                        <li>C#</li>
+                        <li>JavaScript</li>
+                        <li>SQL</li>
+                        <li>HTML &amp; CSS</li>
+                        <li>Swift</li>
+                    </ul>
+                </div>
+                <div class="skill-group reveal">
+                    <h3>Frameworks &amp; libraries</h3>
+                    <ul class="chips">
+                        <li>.NET Web API</li>
+                        <li>Flask</li>
+                        <li>SwiftUI</li>
+                        <li>REST APIs</li>
+                        <li>Bootstrap</li>
+                        <li>Azure OpenAI</li>
+                    </ul>
+                </div>
+                <div class="skill-group reveal">
+                    <h3>Cloud &amp; tools</h3>
+                    <ul class="chips">
+                        <li>AWS RDS</li>
+                        <li>Firebase</li>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>GitHub Actions</li>
+                        <li>Rancher</li>
+                    </ul>
+                </div>
+                <div class="skill-group reveal">
+                    <h3>Concepts</h3>
+                    <ul class="chips">
+                        <li>Data Structures &amp; Algorithms</li>
+                        <li>Object-Oriented Programming</li>
+                        <li>Relational Databases</li>
+                        <li>Operating Systems</li>
+                        <li>Cloud Computing</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="recognition">
+            <div class="section-head reveal">
+                <p class="eyebrow">Recognition</p>
+                <h2>Awards &amp; leadership</h2>
+            </div>
+            <div class="two-col">
+                <div class="reveal">
+                    <h3>Awards</h3>
+                    <ul class="stacked-list">
+                        <li><strong>1st place project</strong>, Grambling State Symposium — 2025</li>
+                        <li><strong>President's List</strong> — 2024 &amp; 2025</li>
+                        <li><strong>NSYP Scholarship</strong> — 2024</li>
+                    </ul>
+                </div>
+                <div class="reveal">
+                    <h3>Leadership</h3>
+                    <ul class="stacked-list">
+                        <li>
+                            <strong>Student Peer Tutor &amp; Mentor</strong>, Office of Student Success (Feb 2024 – present)
+                            — mentored 50+ freshmen and contributed to a 30% increase in math course retention.
+                        </li>
+                        <li>
+                            <strong>Member Coordinator</strong>, National Society of Black Engineers (Feb – May 2024)
+                            — led networking events for 30+ members and coordinated 50+ hours of technical workshops.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-contact" id="contact">
+            <div class="contact-card reveal">
+                <p class="eyebrow">Contact</p>
+                <h2>Let's build something</h2>
+                <p>
+                    I'm open to Summer 2026 internships and always happy to talk about software, cloud, or a project idea.
                 </p>
+                <div class="button-row">
+                    <a class="btn btn-primary" href="mailto:njabulomoyo1327@gmail.com">Email</a>
+                    <a class="btn btn-ghost" href="https://www.linkedin.com/in/njabulo-moyo" target="_blank" rel="noopener">LinkedIn</a>
+                    <a class="btn btn-ghost" href="https://github.com/njabulomoyo" target="_blank" rel="noopener">GitHub</a>
+                </div>
             </div>
-        </div><br>
+        </section>
+    </main>
 
-        <div id="project2">
-            <p class="subheading">Healthcare management system app</p>
-            <div class="subheading-container">
-                <div class="pic-container">
-                    <img class="proj-photos" src="images/health.jpg">
-                </div>
-                <p class="description">
-                    Worked with a team of five to develop a Python-based web application for booking doctor appointments, 
-                    managing prescriptions and diagnoses, and tracking medical billing. I worked on the User Experience and 
-                    User Interface of the app, utilizing HTML & CSS, and Bootstrap.                    
-                    <br>
-                    <a href="https://github.com/njabulomoyo/CS_120_PROJECT/tree/main">Learn More</a>                    
-                </p>
-            </div>
-        </div><br>
-
-        <div class="heading">Coming up</div>
-
-        <div id="project3">
-            <p class="subheading">Find my tutor app</p>
-            <div class="subheading-container">
-                <div class="pic-container"><img class="proj-photos" src="images/tutoring-pic.webp"></div>
-                <p class="description">
-                    Find My Tutor connects students with qualified tutors, simplifying search, scheduling, 
-                    and bookings. Built with React, Flask, and AWS, it ensures seamless academic support<br>
-                    <a href="/">Learn More</a>
-                </p>
-            </div>
-        </div>
-    </section>
-    <br><div id="end-of-projects"></div><br>
-
-    <section>
-        <div class="heading">Skills</div><br>
-        <div class="skills-subheading"><p>Languages</p></div><br>
-        <div class="languages-container">
-            <div class="languages">
-                <i class="fa-brands fa-python" style="color: #3776AB;"></i>
-                <p>Python</p>
-            </div>
-            <div class="languages">
-                <i class="fa-solid fa-database" style="color: #00758F;"></i>
-                <p>SQL</p>
-            </div>
-            <div class="languages">
-                <i class="fa-brands fa-js" style="color: #F7DF1E;"></i> 
-                <p>JavaScript</p>
-            </div>
-            <div class="languages">
-                <i class="fa-brands fa-html5" style="color: #E34F26;"></i>
-                <p>HTML</p> 
-            </div>  
-            <div class="languages">
-                <i class="fa-brands fa-css3-alt" style="color: #1572B6;"></i>
-                <p>CSS</p> 
-            </div>    
-        </div><br>
-        <div class="skills-subheading"><p>Softwares and Tools</p></div><br>
-        <div class="software-tools-container">
-            <div class="software-tools">
-                <div class="software-tools-subheading"><h4>Version Control & collaboration</h4></div>
-                <div class="software-tools-item">
-                    <div class="version-control-item">
-                        <p>Git</p>
-                    </div>
-                    <div class="version-control-item">
-                        <p>Github</p>
-                    </div>
-                </div>
-            </div>
-            <div class="software-tools">
-                <div class="software-tools-subheading"><h4>Database Management</h4></div>
-                <div class="software-tools-item">
-                    <div>
-                        <p>MySQL</p> 
-                    </div>
-                    <div>
-                        <p>AWS Databases</p> 
-                    </div>
-                    <div>
-                        <p>Google Firebase</p> 
-                    </div>     
-                </div>
-            </div>
-            <div class="software-tools">
-                <div class="software-tools-subheading"><h4>Frameworks & Libraries</h4></div>
-                <div class="software-tools-item">
-                    <div>
-                        <p>SwiftUI</p>
-                    </div>
-                    <div>
-                        <p>Bootstrap</p>
-                    </div>
-                    <div>
-                        <p>Flask</p>
-                    </div>
-                    <div>
-                        <p>Selenium</p>
-                    </div>  
-                </div>
-            </div>
-            <div class="software-tools">
-                <div class="software-tools-subheading"><h4>Design & prototyping</h4></div>
-                <div class="software-tools-item">
-                    <div>
-                        <p>Figma</p>
-                    </div>
-                    <div>
-                        <p>Canva</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <br><div id="end-of-skills"></div><br><br>
-
-    <footer id="contact">
-        <div class="footer-bottom">
-            <div class="contact">
-                <div class="contact-links">
-                    <a href="https://www.linkedin.com/in/njabulo-moyo" target="_blank" class="social-link linkedin">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://https://www.instagram.com/_njabuloe/" target="_blank" class="social-link instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="mailto:njabulomoyo1327@gmail.com">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://github.com/njabulomoyo" target="_blank">
-                        <i id="github-icon" class="fab fa-github"></i>
-                    </a>
-                </div>
-            </div>
-            <div><p id="copyrights">&copy; 2025 Njabulo Moyo.</p></div>
-        </div>
+    <footer class="site-footer">
+        <p>&copy; <span id="year">2026</span> Njabulo Moyo.</p>
     </footer>
+
     <script src="app.js"></script>
-    <script src="https://kit.fontawesome.com/YOUR-KIT-ID.js" crossorigin="anonymous"></script>
 </body>
 </html>
